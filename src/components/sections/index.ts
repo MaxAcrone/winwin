@@ -1,0 +1,13 @@
+export { Header } from './Header';
+export { ProblemChecklist } from './ProblemChecklist';
+export { Hero } from './Hero';
+export { Cases } from './Cases';
+export { Founder } from './Founder';
+export { StrategicMeeting } from './StrategicMeeting';
+export { Ecosystem } from './Ecosystem';
+export { PartnersBand } from './PartnersBand';
+export { Bitrix24 } from './Bitrix24';
+export { CommunityTG } from './CommunityTG';
+export { SocialLinks } from './SocialLinks';
+export { ContactForm } from './ContactForm';
+export { Footer } from './Footer';
