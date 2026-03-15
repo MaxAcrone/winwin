@@ -30,6 +30,7 @@ export interface CaseDetail {
   subtitle: string;
   category: string;
   imageUrl: string;
+  gallery?: string[];
   heroMetric: {
     value: string;
     label: string;

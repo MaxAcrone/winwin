@@ -145,6 +145,27 @@ export default function CasePage({ params }: Props) {
         </section>
       )}
 
+      {/* Gallery */}
+      {caseData.gallery && caseData.gallery.length > 1 && (
+        <section className="border-b border-border">
+          <div className="p-6 md:px-12 lg:px-20 py-8 border-b border-border">
+            <h2 className="text-2xl font-bold uppercase tracking-tighter">Галерея</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {caseData.gallery.map((img, i) => (
+              <div key={i} className="relative aspect-[4/3] border-b md:border-b-0 border-r border-border last:border-r-0">
+                <Image
+                  src={img}
+                  alt={`${caseData.title} - ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Results */}
       {caseData.results && (
         <section className="border-b border-border">

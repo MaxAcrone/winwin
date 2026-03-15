@@ -26,10 +26,10 @@ export function Hero() {
       
       <div className="relative w-full h-[50vh] lg:h-auto bg-black">
         <Image
-          src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?q=80&w=1400&auto=format&fit=crop"
-          alt="Futuristic Portrait"
+          src="/Media/В первый блок.png"
+          alt="win-win consulting"
           fill
-          className="object-cover grayscale contrast-125 object-center"
+          className="object-cover object-center"
           priority
         />
         
