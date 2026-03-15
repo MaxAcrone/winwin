@@ -40,9 +40,16 @@ export function CommunityTG() {
             <div className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">1,000 ₽</div>
             <div className="text-xs text-subtle uppercase tracking-widest mb-8">/ МЕСЯЦ</div>
             
-            <Button variant="primary" fullWidth className="py-5">
-              СТАТЬ ЧАСТЬЮ
-            </Button>
+            <a 
+              href="https://t.me/winconsult_bot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Button variant="primary" fullWidth className="py-5">
+                СТАТЬ ЧАСТЬЮ
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export function ProblemChecklist() {
             </p>
             <div className="flex items-center gap-3 text-sm">
               <span className="w-8 h-px bg-white/30"></span>
-              <span className="text-white/60">Стратегия → Внедрение → Сопровождение</span>
+              <span className="text-white/60">Анализ ошибок → Стратегия → Сопровождение</span>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@ export function ProblemChecklist() {
         <div className="p-6 md:p-12 lg:p-16 flex flex-col justify-center">
           <div className="max-w-md">
             <p className="text-xs uppercase tracking-widest text-subtle mb-2">Бесплатно</p>
-            <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">12 точек роста бизнеса</h3>
+            <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">18 точек роста бизнеса</h3>
             <p className="text-sm text-subtle mb-6">Чек-лист поможет определить слабые места и точки роста вашего бизнеса.</p>
             
             <a 

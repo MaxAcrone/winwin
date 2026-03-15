@@ -1,9 +1,9 @@
 import type { SocialLink } from '@/lib/types';
 
 const socialLinks: SocialLink[] = [
-  { id: '1', platform: 'telegram', url: '#', label: 'TELEGRAM' },
-  { id: '2', platform: 'vk', url: '#', label: 'VK' },
-  { id: '3', platform: 'youtube', url: '#', label: 'YOUTUBE' },
+  { id: '1', platform: 'telegram', url: 'https://t.me/winconsultru', label: 'TELEGRAM' },
+  { id: '2', platform: 'vk', url: 'https://vk.com/starikovdani', label: 'VK' },
+  { id: '3', platform: 'youtube', url: 'https://www.youtube.com/@winconsultru', label: 'YOUTUBE' },
 ];
 
 const iconMap = {

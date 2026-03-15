@@ -16,7 +16,7 @@ export function PartnersBand() {
         {duplicatedLogos.map((logo, index) => (
           <div 
             key={`${logo.id}-${index}`} 
-            className="flex-shrink-0 mx-8 md:mx-12 relative h-8 md:h-10 w-24 md:w-32 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
+            className="flex-shrink-0 mx-8 md:mx-12 relative h-16 md:h-24 w-32 md:w-48 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
           >
             <Image
               src={logo.src}

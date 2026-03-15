@@ -4,6 +4,13 @@ export function Ecosystem() {
     'Финансовый учёт', 'HR', 'IT Разработка', 'Инвестиции', 'Юристы'
   ];
 
+  const stages = [
+    { title: 'Стратегия', description: 'Разработка плана роста бизнеса на 6 месяцев' },
+    { title: 'Внедрение', description: 'Подключение специалистов и внедрение решений' },
+    { title: 'Сопровождение', description: 'Контроль и управление ростом бизнеса' },
+    { title: 'Экосистема и комьюнити', description: 'Доступ к специалистам, инструментам и среде предпринимателей' },
+  ];
+
   return (
     <section className="border-b border-border">
       <div className="p-6 md:px-12 lg:px-20 py-12 border-b border-border">
@@ -12,20 +19,23 @@ export function Ecosystem() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
         <div className="p-6 md:p-12 lg:p-20 border-b md:border-b-0 md:border-r border-border">
-          <p className="text-sm text-subtle mb-8">Стратегия разработки плана роста бизнеса в 6 шагов</p>
-          <div className="space-y-6">
-            <div>
-              <span className="text-xs text-subtle uppercase tracking-widest block mb-2">01</span>
-              <p className="text-sm">Внедрение новых специалистов и внедрение</p>
-            </div>
-            <div>
-              <span className="text-xs text-subtle uppercase tracking-widest block mb-2">02</span>
-              <p className="text-sm">Сопровождение создание и управление ростом бизнеса</p>
-            </div>
-            <div>
-              <span className="text-xs text-subtle uppercase tracking-widest block mb-2">03</span>
-              <p className="text-sm">Консалтинг доступ к специалистам, инструментам и среде предпринимателей</p>
-            </div>
+          <div className="flex flex-col gap-6">
+            {stages.map((stage, index) => (
+              <div key={stage.title} className="flex items-start gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">
+                    {index + 1}
+                  </div>
+                  {index < stages.length - 1 && (
+                    <div className="w-0.5 h-8 bg-black/20 mt-2" />
+                  )}
+                </div>
+                <div className="pt-2">
+                  <h4 className="font-bold text-sm uppercase tracking-wide mb-1">{stage.title}</h4>
+                  <p className="text-sm text-subtle">{stage.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         
@@ -34,7 +44,7 @@ export function Ecosystem() {
           <ul className="text-sm space-y-3">
             {partners.map((partner) => (
               <li key={partner} className="flex items-center gap-3">
-                <span className="iconify text-white/30" data-icon="solar:arrow-right-linear" data-width="16" data-height="16" />
+                <span className="w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />
                 {partner}
               </li>
             ))}
