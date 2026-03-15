@@ -26,7 +26,7 @@ export function Hero() {
       
       <div className="relative w-full h-[50vh] lg:h-auto bg-black">
         <Image
-          src="/Media/В первый блок.png"
+          src="/Media/hero.png"
           alt="win-win consulting"
           fill
           className="object-cover object-center"

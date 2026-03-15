@@ -7,11 +7,17 @@ const partnerLogos = Array.from({ length: 15 }, (_, i) => ({
 }));
 
 export function PartnersBand() {
+  // Дублируем логотипы для бесшовной анимации
+  const duplicatedLogos = [...partnerLogos, ...partnerLogos];
+
   return (
-    <div className="py-8 px-6 md:px-12 w-full bg-white border-t border-border">
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-        {partnerLogos.map((logo) => (
-          <div key={logo.id} className="relative h-8 md:h-10 w-24 md:w-32 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+    <div className="py-8 bg-white border-t border-border overflow-hidden">
+      <div className="flex animate-marquee">
+        {duplicatedLogos.map((logo, index) => (
+          <div 
+            key={`${logo.id}-${index}`} 
+            className="flex-shrink-0 mx-8 md:mx-12 relative h-8 md:h-10 w-24 md:w-32 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
+          >
             <Image
               src={logo.src}
               alt={logo.alt}
