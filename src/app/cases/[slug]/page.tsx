@@ -41,7 +41,7 @@ export default function CasePage({ params }: Props) {
             src={caseData.imageUrl}
             alt={caseData.title}
             fill
-            className="object-cover grayscale contrast-125"
+            className="object-contain grayscale contrast-125"
             priority
           />
         </div>
@@ -158,7 +158,7 @@ export default function CasePage({ params }: Props) {
                   src={img}
                   alt={`${caseData.title} - ${i + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             ))}

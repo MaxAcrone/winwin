@@ -23,7 +23,7 @@ export function CaseCard({ title, category, metrics, imageUrl, slug, className }
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover grayscale contrast-125 opacity-80 mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
+            className="object-contain grayscale contrast-125 opacity-80 mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
           />
         </div>
       </div>

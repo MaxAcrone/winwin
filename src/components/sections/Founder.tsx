@@ -19,14 +19,11 @@ export function Founder() {
       
       <div className="relative w-full h-[60vh] md:h-auto overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
+          src="/Media/main.jpg"
           alt="Стариков Данил"
           fill
-          className="object-cover grayscale contrast-125 object-center"
+          className="object-contain grayscale contrast-125"
         />
-        <div className="absolute bottom-6 right-6 text-right">
-          <div className="text-xs uppercase tracking-widest bg-white text-black px-3 py-1 inline-block">*фото* Стариков Данил</div>
-        </div>
       </div>
     </section>
   );
