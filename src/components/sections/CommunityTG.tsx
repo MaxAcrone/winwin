@@ -12,7 +12,7 @@ export function CommunityTG() {
     <section id="community" className="border-b border-border">
       <div className="p-6 md:px-12 lg:px-20 py-16 border-b border-border text-center bg-black text-white">
         <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter flex items-center justify-center gap-4">
-          КОМЬЮНИТИ ТГ 
+          WIN-CLUB 
           <span className="iconify mt-1 opacity-50" data-icon="solar:paperclip-linear" data-width="40" data-height="40" />
         </h2>
       </div>

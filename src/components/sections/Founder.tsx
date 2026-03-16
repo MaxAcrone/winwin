@@ -9,7 +9,7 @@ export function Founder() {
           С-LEVEL
         </h2>
         <p className="text-sm text-white/70 leading-relaxed mb-8">
-          Помогаю компаниям выстраивать систему роста и увеличивать выручку. В отличие от агентств роста, Команда — это инструменты, которыми я управляю.
+          Помогаю компаниям выстраивать систему роста и увеличивать выручку. Я отвечаю за систему роста. Команды - это инструменты, которыми я управляю.
         </p>
         <div className="mt-auto">
           <div className="text-xl font-bold uppercase tracking-tight">СТАРИКОВ ДАНИЛ</div>
