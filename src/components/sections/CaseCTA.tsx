@@ -47,7 +47,7 @@ export function CaseCTA({ cta }: CaseCTAProps) {
         <p className="text-2xl md:text-3xl font-bold tracking-tight mb-8">{cta}</p>
         <Button 
           variant="primary" 
-          className="bg-white text-black hover:bg-black hover:text-white border-white"
+          className="bg-white text-black hover:bg-gray-200 border-white"
           onClick={() => setIsModalOpen(true)}
         >
           ОБСУДИТЬ ПРОЕКТ
