@@ -54,9 +54,9 @@ export interface Partner {
 export interface ContactFormData {
   name: string;
   phone?: string;
-  company?: string;
-  position?: string;
-  problem?: string;
+  company: string;
+  position: string;
+  problem: string;
   message?: string;
 }
 
