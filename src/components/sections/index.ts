@@ -11,3 +11,4 @@ export { CommunityTG } from './CommunityTG';
 export { SocialLinks } from './SocialLinks';
 export { ContactForm } from './ContactForm';
 export { Footer } from './Footer';
+export { CaseCTA } from './CaseCTA';

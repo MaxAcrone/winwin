@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { caseDetails } from '@/lib/cases-data';
-import { Button } from '@/components/ui';
+import { CaseCTA } from '@/components/sections/CaseCTA';
 
 interface Props {
   params: { slug: string };
@@ -184,14 +184,7 @@ export default function CasePage({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="p-6 md:p-12 lg:p-20 bg-black text-white text-center">
-        <p className="text-2xl md:text-3xl font-bold tracking-tight mb-8">{caseData.cta}</p>
-        <Link href="/#contact">
-          <Button variant="primary" className="bg-white text-black hover:bg-black hover:text-white border-white">
-            ОБСУДИТЬ ПРОЕКТ
-          </Button>
-        </Link>
-      </section>
+      <CaseCTA cta={caseData.cta} />
     </main>
   );
 }
