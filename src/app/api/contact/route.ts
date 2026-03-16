@@ -7,27 +7,35 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '463172426';
 
 async function sendToTelegram(data: ContactFormData) {
   const message = `
-🔔 *Новая заявка с сайта*
+🔔 Новая заявка с сайта
 
-👤 *Имя:* ${data.name || 'Не указано'}
-📱 *Телефон:* ${data.phone || 'Не указан'}
-🏢 *Компания:* ${data.company || 'Не указана'}
-💬 *Сообщение:* ${data.message || 'Не указано'}
+👤 Имя: ${data.name || 'Не указано'}
+🏢 Компания: ${data.company || 'Не указана'}
+💼 Должность: ${data.position || 'Не указана'}
+📝 Задача: ${data.problem || 'Не указана'}
 
-📅 *Дата:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}
+📅 Дата: ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}
   `.trim();
 
-  const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: TELEGRAM_CHAT_ID,
-      text: message,
-      parse_mode: 'Markdown',
-    }),
-  });
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+      }),
+    });
 
-  return response.ok;
+    const result = await response.json();
+    if (!response.ok) {
+      console.error('Telegram API error:', result);
+    }
+    return response.ok;
+  } catch (error) {
+    console.error('Telegram fetch error:', error);
+    return false;
+  }
 }
 
 export async function POST(request: Request) {
