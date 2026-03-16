@@ -33,14 +33,14 @@ export function Hero() {
           priority
         />
         
-        <div className="absolute top-6 right-6 text-white text-xs space-y-2 text-right max-w-xs">
+        <div className="absolute top-6 right-6 text-black text-xs space-y-2 text-right max-w-xs">
           <p className="opacity-70">ДЛЯ КОГО ЭТО:</p>
           <p>→ Собственники бизнеса</p>
           <p>→ Руководители отделов продаж</p>
           <p>→ Маркетологи</p>
         </div>
         
-        <div className="absolute bottom-6 left-6 text-white text-xs space-y-1">
+        <div className="absolute bottom-6 left-6 text-black text-xs space-y-1">
           <p className="opacity-70">РЕЗУЛЬТАТ:</p>
           <p>+ Рост выручки и прибыли</p>
           <p>+ Управляемый поток клиентов</p>

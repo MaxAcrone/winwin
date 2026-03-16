@@ -53,9 +53,11 @@ export interface Partner {
 
 export interface ContactFormData {
   name: string;
-  company: string;
-  position: string;
-  problem: string;
+  phone?: string;
+  company?: string;
+  position?: string;
+  problem?: string;
+  message?: string;
 }
 
 export interface ValidationResult {

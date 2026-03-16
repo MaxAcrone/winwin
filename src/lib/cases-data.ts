@@ -19,7 +19,7 @@ export const cases: Case[] = [
   },
   {
     id: '3',
-    title: 'ENJOY',
+    title: 'АГЕНТСТВО МЕД. МАРКЕТИНГА',
     category: 'отдел продаж',
     metrics: '500,000$ в B2B / цикл сделки -50%',
     imageUrl: '/Media/case-enjoy-3.jpg',
@@ -31,7 +31,7 @@ export const caseDetails: Record<string, CaseDetail> = {
   'enjoy': {
     id: '3',
     slug: 'enjoy',
-    title: 'ENJOY',
+    title: 'АГЕНТСТВО МЕД. МАРКЕТИНГА',
     subtitle: 'Создание отдела продаж с нуля',
     category: 'B2B / Отдел продаж / CRM',
     imageUrl: '/Media/case-enjoy-3.jpg',
