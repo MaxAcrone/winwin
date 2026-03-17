@@ -1,11 +1,55 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { caseDetails } from '@/lib/cases-data';
 import { CaseCTA } from '@/components/sections/CaseCTA';
 
 interface Props {
   params: { slug: string };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const caseData = caseDetails[params.slug];
+  
+  if (!caseData) {
+    return {
+      title: 'Кейс не найден | win-win consulting',
+    };
+  }
+
+  return {
+    title: `${caseData.title} — Кейс | win-win consulting Челябинск`,
+    description: `${caseData.subtitle}. ${caseData.niche}. Результат: ${caseData.heroMetric.value} ${caseData.heroMetric.label}. Маркетинговое агентство win-win consulting.`,
+    keywords: [
+      caseData.title,
+      caseData.category,
+      caseData.niche,
+      'кейс маркетинг',
+      'результаты маркетинга',
+      'win-win consulting',
+      'Челябинск',
+    ],
+    openGraph: {
+      title: `${caseData.title} — Кейс win-win consulting`,
+      description: caseData.subtitle,
+      url: `https://winconsult.ru/cases/${params.slug}`,
+      siteName: 'win-win consulting',
+      locale: 'ru_RU',
+      type: 'article',
+      images: [
+        {
+          url: caseData.imageUrl,
+          width: 1200,
+          height: 630,
+          alt: caseData.title,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `/cases/${params.slug}`,
+    },
+  };
 }
 
 export default function CasePage({ params }: Props) {

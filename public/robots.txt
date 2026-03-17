@@ -1,0 +1,15 @@
+# Robots.txt for winconsult.ru
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://winconsult.ru/sitemap.xml
+
+# Yandex specific
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
