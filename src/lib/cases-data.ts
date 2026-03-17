@@ -14,7 +14,7 @@ export const cases: Case[] = [
     title: 'МЕД-ОРТО',
     category: 'B2B / e-commerce',
     metrics: '43.874 посещения сайта / 560 сделок / ROI 120%',
-    imageUrl: '/Media/case-medorto-1.jpg',
+    imageUrl: '/Media/Cover_Medorto.jpg',
     slug: 'med-orto',
   },
   {
