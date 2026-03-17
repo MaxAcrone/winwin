@@ -82,8 +82,8 @@ export default function RootLayout({
     url: 'https://winconsult.ru',
     logo: 'https://winconsult.ru/Media/hero.png',
     image: 'https://winconsult.ru/Media/hero.png',
-    telephone: '+7-000-000-0000',
-    email: 'info@winconsult.ru',
+    telephone: '+7-982-323-35-91',
+    email: 'daysdanil05@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Челябинск',
