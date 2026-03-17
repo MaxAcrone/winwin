@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button, Input } from '@/components/ui';
+import { Input } from '@/components/ui';
 
 interface CaseCTAProps {
   cta: string;
@@ -45,13 +45,12 @@ export function CaseCTA({ cta }: CaseCTAProps) {
     <>
       <section className="p-6 md:p-12 lg:p-20 bg-black text-white text-center">
         <p className="text-2xl md:text-3xl font-bold tracking-tight mb-8">{cta}</p>
-        <Button 
-          variant="primary" 
-          className="bg-white text-black hover:bg-gray-200 border-white"
+        <button 
+          className="px-8 py-4 bg-white text-black font-medium uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
           onClick={() => setIsModalOpen(true)}
         >
           ОБСУДИТЬ ПРОЕКТ
-        </Button>
+        </button>
       </section>
 
       {isModalOpen && (
