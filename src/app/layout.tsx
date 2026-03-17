@@ -3,6 +3,17 @@ import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: '/Media/favicons-WinWIn/favicon.ico' },
+      { url: '/Media/favicons-WinWIn/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/Media/favicons-WinWIn/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/Media/favicons-WinWIn/apple-touch-icon.png',
+    other: [
+      { rel: 'manifest', url: '/Media/favicons-WinWIn/site.webmanifest' },
+    ],
+  },
   title: 'win-win consulting | Маркетинговое агентство Челябинск — Стратегия роста бизнеса',
   description: 'Маркетинговое агентство в Челябинске. Выстраиваем стратегию роста прибыли, создаём отделы продаж, внедряем CRM и системы привлечения клиентов. B2B маркетинг, лидогенерация, бизнес-консалтинг.',
   keywords: [
