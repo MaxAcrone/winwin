@@ -41,7 +41,7 @@ export function Header() {
           rel="noopener noreferrer"
           className="hover:opacity-50 transition-opacity flex items-center justify-center"
         >
-          <img src="/Media/2 (2).png" alt="Telegram" className="w-6 h-6 object-contain" />
+          <img src="/Media/tg.png" alt="Telegram" className="w-6 h-6 object-contain" />
         </a>
         <a 
           href="https://t.me/winconsult_bot"
