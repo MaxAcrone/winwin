@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { CookieBanner } from '@/components/ui';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -197,6 +198,7 @@ export default function RootLayout({
       </head>
       <body className="w-full font-mono text-sm antialiased">
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

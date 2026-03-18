@@ -36,6 +36,14 @@ export function Header() {
       </div>
       <div className="w-1/3 flex justify-end gap-4">
         <a 
+          href="https://t.me/winconsultru"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-50 transition-opacity flex items-center justify-center"
+        >
+          <img src="/Media/2 (2).png" alt="Telegram" className="w-6 h-6 object-contain" />
+        </a>
+        <a 
           href="https://t.me/winconsult_bot"
           target="_blank"
           rel="noopener noreferrer"

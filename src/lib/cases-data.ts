@@ -41,7 +41,7 @@ export const caseDetails: Record<string, CaseDetail> = {
       '/Media/case-enjoy-3.jpg',
     ],
     heroMetric: {
-      value: '500,000$',
+      value: '300,000$',
       label: 'выручка в B2B',
     },
     niche: 'B2B агентство медицинского маркетинга',
