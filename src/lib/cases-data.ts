@@ -16,6 +16,7 @@ export const cases: Case[] = [
     metrics: '43,874 посещения сайта / 560 сделок / ROI 120%',
     imageUrl: '/Media/Cover_Medorto.jpg',
     slug: 'med-orto',
+    locked: true,
   },
   {
     id: '3',

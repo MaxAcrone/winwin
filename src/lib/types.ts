@@ -5,6 +5,7 @@ export interface Case {
   metrics: string;
   imageUrl: string;
   slug: string;
+  locked?: boolean;
 }
 
 export interface CaseMetric {

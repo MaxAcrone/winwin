@@ -2,8 +2,10 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { caseDetails } from '@/lib/cases-data';
+import { cases, caseDetails } from '@/lib/cases-data';
 import { CaseCTA } from '@/components/sections/CaseCTA';
+
+const lockedSlugs = new Set(cases.filter(c => c.locked).map(c => c.slug));
 
 interface Props {
   params: { slug: string };
@@ -12,7 +14,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const caseData = caseDetails[params.slug];
   
-  if (!caseData) {
+  if (!caseData || lockedSlugs.has(params.slug)) {
     return {
       title: 'Кейс не найден | win-win consulting',
     };
@@ -55,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function CasePage({ params }: Props) {
   const caseData = caseDetails[params.slug];
   
-  if (!caseData) {
+  if (!caseData || lockedSlugs.has(params.slug)) {
     notFound();
   }
 
@@ -234,5 +236,7 @@ export default function CasePage({ params }: Props) {
 }
 
 export function generateStaticParams() {
-  return Object.keys(caseDetails).map((slug) => ({ slug }));
+  return Object.keys(caseDetails)
+    .filter((slug) => !lockedSlugs.has(slug))
+    .map((slug) => ({ slug }));
 }
